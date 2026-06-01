@@ -1,5 +1,4 @@
 import math
-import random
 from dataclasses import dataclass
 from typing import Any, cast
 
@@ -457,15 +456,14 @@ class PlanetaryKinematics:
     wc: Any
     """The angular velocity of the planet carrier with respect to the inertial frame."""
 
-    def __init__(self) -> None:
-        designator = random.randint(1, 10000)  # noqa: S311
+    def __init__(self, designator: str) -> None:
         self.zs, self.zp, self.zr = symbols(
             " ".join([f"{x}{designator}" for x in ["zs", "zp", "zr"]]),
             integer=True,
             positive=True,
         )
         self.ws, self.wp, self.wr, self.wc = symbols(
-            " ".join([f"{x}{designator}" for x in ["ws", "wp", "wr", "wc"]]),
+            " ".join([f"{x}_{designator}" for x in ["ws", "wp", "wr", "wc"]]),
         )
 
     @property
