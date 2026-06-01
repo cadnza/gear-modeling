@@ -12,7 +12,7 @@ build-backend = "uv_build"
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["D100", "D107"]
+ignore = ["D100", "D107", "E501"]
 
 [tool.pyright]
 typeCheckingMode = "strict"

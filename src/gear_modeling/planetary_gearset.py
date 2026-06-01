@@ -101,7 +101,7 @@ class PlanetaryGearset:
         )
 
     def __repr__(self) -> str:
-        return f"PlanetaryGearset(z_sun = {self.z_sun:3d}, z_planet = {self.z_planet:3d}, z_ring = {self.z_ring:3d}, n_planets = {self.n_planet_gears:3d})"  # noqa: E501
+        return f"PlanetaryGearset(z_sun = {self.z_sun:3d}, z_planet = {self.z_planet:3d}, z_ring = {self.z_ring:3d}, n_planets = {self.n_planet_gears:3d})"
 
     def __init__(
         self,
@@ -173,12 +173,12 @@ class PlanetaryGearset:
                 msg_1,
             )
         if self.z_planet < MINIMUM_TEETH:
-            msg_1 = f"Planet gear tooth count must be greater than or equal to {MINIMUM_TEETH}"  # noqa: E501
+            msg_1 = f"Planet gear tooth count must be greater than or equal to {MINIMUM_TEETH}"
             raise PlanetGearToothCountTooLowError(
                 msg_1,
             )
         if self.z_ring < MINIMUM_TEETH:
-            msg_1 = f"Ring gear tooth count must be greater than or equal to {MINIMUM_TEETH}"  # noqa: E501
+            msg_1 = f"Ring gear tooth count must be greater than or equal to {MINIMUM_TEETH}"
             raise PlanetGearToothCountTooLowError(
                 msg_1,
             )
@@ -429,7 +429,7 @@ class PlanetaryGearset:
 
     @property
     def distance_sun_to_planet(self) -> float:
-        """The distance from the center of the sun gear to the center ofa planet gear."""  # noqa: E501
+        """The distance from the center of the sun gear to the center ofa planet gear."""
         return (self.z_sun + self.z_planet) / 2
 
 
