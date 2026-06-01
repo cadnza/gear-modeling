@@ -22,29 +22,29 @@ class _PlanetaryGearsetVelocity:
     """A planetary gearset velocity."""
 
     w_sun: float
-    """The velocity of the sun gear with respect to the inertial frame."""
+    """The angular velocity of the sun gear with respect to the inertial frame."""
 
     w_planets: float
-    """The velocity of each planet gear (same for each) with respect to the inertial frame."""
+    """The angular velocity of each planet gear (same for each) with respect to the inertial frame."""
 
     w_ring: float
-    """The velocity of the ring gear with respect to the inertial frame."""
+    """The angular velocity of the ring gear with respect to the inertial frame."""
 
     w_carrier: float
-    """The velocity of the carrier with respect to the inertial frame."""
+    """The angular velocity of the planet carrier with respect to the inertial frame."""
 
 
 class PlanetaryGearset:
     """A planetary gear configuration."""
 
     z_sun: int
-    """The number of teeth in the sun gear."""
+    """The number of teeth on the sun gear."""
 
     z_planet: int
-    """The number of teeth in each planet gear (same for each)."""
+    """The number of teeth on each planet gear (same for each)."""
 
     z_ring: int
-    """The number of teeth in the ring gear."""
+    """The number of teeth on the ring gear."""
 
     n_planet_gears: int
     """The number of planet gears."""
