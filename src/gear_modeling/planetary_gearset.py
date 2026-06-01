@@ -458,12 +458,12 @@ class PlanetaryKinematics:
 
     def __init__(self, designator: str) -> None:
         self.zs, self.zp, self.zr = symbols(
-            " ".join([f"{x}{designator}" for x in ["zs", "zp", "zr"]]),
+            " ".join([f"{x}_{designator}" for x in ["z_S", "z_P", "z_R"]]),
             integer=True,
             positive=True,
         )
         self.ws, self.wp, self.wr, self.wc = symbols(
-            " ".join([f"{x}_{designator}" for x in ["ws", "wp", "wr", "wc"]]),
+            " ".join([f"{x}_{designator}" for x in ["w_S", "w_P", "w_R", "w_C"]]),
         )
 
     @property
