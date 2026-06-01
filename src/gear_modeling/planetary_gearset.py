@@ -100,7 +100,7 @@ class PlanetaryGearset:
             ),
         )
 
-    def __repr__(self) -> str:
+    def __repr__(self) -> str:  # noqa: D105
         return f"PlanetaryGearset(z_sun = {self.z_sun:3d}, z_planet = {self.z_planet:3d}, z_ring = {self.z_ring:3d}, n_planets = {self.n_planet_gears:3d})"
 
     def __init__(
