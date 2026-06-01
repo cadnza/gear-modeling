@@ -528,28 +528,28 @@ class PlanetaryKinematics:
 
 
 class TooFewPlanetGearsError(Exception):
-    pass
+    """Thrown given too few planet gears."""
 
 
 class TooFewToothCountsSpecifiedError(Exception):
-    pass
+    """Thrown when too few tooth counts are specified to calculate a planetary gearset."""
 
 
 class InvalidConfigurationGivenToothCountsError(Exception):
-    pass
+    """Thrown when the tooth counts given resolve to an invalid planetary gearset configuration."""
 
 
 class PlanetGearToothCountTooLowError(Exception):
-    pass
+    """Thrown given a planet gear tooth count that's too low."""
 
 
 class PlanetGearsCannotBeEvenlySpacedError(Exception):
-    pass
+    """Thrown when the given number of planet gears represents gears that cannot be evenly spaced given the planetary gearset configuration."""
 
 
 class PlanetGearsOverlappingError(Exception):
-    pass
+    """Thrown when the given planetary gearset configuration must overlap planet gears in order to resolve."""
 
 
 class InvalidDriveConfigurationError(Exception):
-    pass
+    """Thrown when the given drive configuration is invalid."""
